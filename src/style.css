@@ -1,85 +1,79 @@
+@import "./normalize.css";
 @import './modal.css';
-@import './todo.css';
 
-html {
-    height: 100%;
-    font-size: 16px;
-}
-
-body {
-    height: 100%;
-    min-height: 100%;
-    font: normal 400 15px/24px 'Roboto', sans-serif;
-    background-color: #f6f7f8;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-div {
-    box-sizing: border-box;
-}
-
-ul,
-ol {
-    list-style: none;
-    padding: 0;
+body{
+    background-color: #eaf5fc;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
     margin: 0;
+    padding: 0;
+
 }
 
-a {
-    color: #336fee;
-    outline: none;
-    text-decoration: none;
+.header__info{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
 }
+.posts__container{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 120px;
+    width: 820px;
+}
+.posts__content{
+    display: flex;
+    margin-bottom: 20px;
+    background-color: rgb(248, 248, 248);
+    max-height: 500px;
+    width: 800px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 2px;
+}
+.username{
+    width: 100px;
+    height: 150px;
+    margin-right: 10px;
 
-/* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
+}
+.username h3{
+    padding-top: 25px;
+}
+.info{
+   width:500px;
+   display: flex;
+   flex-wrap: wrap;
+   text-align: center;
+   margin-right: 15px;
 
-button {
+}
+.title{
+    align-self: center;
+    width: 100%;
+}
+button{
     padding: 8px;
     display: inline-block;
     text-decoration: none;
-    background-color: #414b52;
-    margin: 10px;
+    background-color: #000000;
+    margin: 5px;
     color: #fff;
-    border-radius: 3px;
 }
-
-a:hover {
-    color: #6e87e1;
+.edit-button{
+    align-self: center;
 }
-
-img {
+.delete-button{
+    align-self: center;
+    margin-right: 5px;
+}
+.add-button-container{
     width: 100%;
-}
 
-::-ms-clear {
-    display: none;
 }
-
-::-ms-reveal {
-    display: none;
-}
-
-.app {
+.add-button{
+    display: block;
     margin: 0 auto;
-    visibility: visible;
-}
-
-.container {
-    max-width: 1200px;
-}
-
-.add-todo {
-    padding: 20px 0;
-    margin-bottom: 20px;
-}
-
-.todo-list {
-    display: flex;
-    flex-flow: column nowrap;
-}
-
-.todo-list__item + .todo-list__item {
-    margin-top: 20px;
+    margin-top: 30px;
 }
